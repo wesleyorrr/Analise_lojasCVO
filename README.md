@@ -1,1 +1,1 @@
-# Analise_lojasCVO
+# Analise de Lojas de Curvelo
