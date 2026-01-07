@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Lojas Curvelo - Análise Completa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-chart-line"></i> Dashboard de Lojas - Curvelo/MG</h1>
+            <p class="subtitle">Análise completa com ranking, gráficos e sistema de feedback</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Painel de Controle -->
+        <div class="control-panel">
+            <button class="control-btn" id="showCongrats">
+                <i class="fas fa-trophy"></i> Parabenizar Líderes
+            </button>
+            <button class="control-btn" id="showAlerts">
+                <i class="fas fa-exclamation-triangle"></i> Ver Alertas
+            </button>
+            <button class="control-btn" id="exportData">
+                <i class="fas fa-file-export"></i> Exportar Dados
+            </button>
+        </div>
+
+        <div class="dashboard">
+            <!-- Painel de Filtros -->
+            <aside class="filters">
+                <h2><i class="fas fa-filter"></i> Filtros</h2>
+                
+                <div class="filter-group">
+                    <h3>Categorias</h3>
+                    <ul class="category-list" id="categoryFilter">
+                        <!-- As categorias serão preenchidas via JavaScript -->
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Avaliação Mínima</h3>
+                    <div class="rating-filter">
+                        <span id="ratingValue">4.0</span>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="5" step="0.1" value="4.0" class="slider" id="ratingSlider">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Status</h3>
+                    <div class="status-filter">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="openNowFilter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span>Abertas agora</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Nível de Avaliação</h3>
+                    <div class="level-filter">
+                        <label class="radio-label">
+                            <input type="radio" name="level" value="all" checked>
+                            <span class="radio-custom"></span>
+                            <span>Todas</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="level" value="high">
+                            <span class="radio-custom"></span>
+                            <span>Alta (≥ 4.5)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="level" value="medium">
+                            <span class="radio-custom"></span>
+                            <span>Média (3.5 - 4.4)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="level" value="low">
+                            <span class="radio-custom"></span>
+                            <span>Baixa (< 3.5)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <p>Total de lojas: <span id="totalShops">0</span></p>
+                    <p>Lojas abertas: <span id="openShops">0</span></p>
+                    <p>Média geral: <span id="avgRating">0.0</span></p>
+                    <p>Líder em avaliações: <span id="topShop">-</span></p>
+                </div>
+                
+                <button class="btn reset-btn" id="resetFilters">
+                    <i class="fas fa-redo"></i> Limpar Filtros
+                </button>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="main-content">
+                <!-- Seção de Gráficos -->
+                <section class="charts-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-bar"></i> Análise Visual</h2>
+                        <div class="chart-controls">
+                            <button class="btn small-btn" id="toggleCharts">
+                                <i class="fas fa-exchange-alt"></i> Alternar Gráficos
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="charts-container">
+                        <div class="chart-wrapper">
+                            <div class="chart-header">
+                                <h3>Top 10 Lojas por Avaliação</h3>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="rankingChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-wrapper">
+                            <div class="chart-header">
+                                <h3>Distribuição por Categoria</h3>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="categoryChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-wrapper full-width">
+                            <div class="chart-header">
+                                <h3>Performance por Número de Avaliações</h3>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="reviewsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Seção de Ranking -->
+                <section class="ranking-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-trophy"></i> Ranking de Lojas</h2>
+                        <div class="ranking-info">
+                            <span class="badge high">Alta: ≥ 4.5</span>
+                            <span class="badge medium">Média: 3.5 - 4.4</span>
+                            <span class="badge low">Baixa: < 3.5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ranking-table-container">
+                        <table class="ranking-table">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Loja</th>
+                                    <th>Categoria</th>
+                                    <th>Avaliação</th>
+                                    <th>Nº Avaliações</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rankingTableBody">
+                                <!-- As linhas serão preenchidas via JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Cards das Lojas -->
+                <section class="cards-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-th-large"></i> Detalhes das Lojas</h2>
+                        <div class="result-count">
+                            Mostrando <span id="resultCount">0</span> de <span id="totalCount">0</span> lojas
+                        </div>
+                    </div>
+                    
+                    <div class="cards-container" id="cardsContainer">
+                        <!-- Os cards serão gerados via JavaScript -->
+                    </div>
+                    
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <i class="fas fa-search"></i>
+                        <h3>Nenhuma loja encontrada</h3>
+                        <p>Tente ajustar os filtros para ver mais resultados.</p>
+                    </div>
+                </section>
+                
+                <!-- Mapa -->
+                <section class="map-section">
+                    <div class="map-header">
+                        <h2><i class="fas fa-map-marker-alt"></i> Mapa de Localização</h2>
+                        <button class="btn" id="toggleMap">
+                            <i class="fas fa-expand"></i> Expandir Mapa
+                        </button>
+                    </div>
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Modal de Parabéns -->
+    <div class="modal" id="congratsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-trophy"></i> Parabéns às Lojas Líderes!</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="congratsModalBody">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn" id="shareCongrats">
+                    <i class="fas fa-share-alt"></i> Compartilhar
+                </button>
+                <button class="btn secondary-btn close-modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Alertas -->
+    <div class="modal" id="alertsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> Alertas de Melhoria</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="alertsModalBody">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn secondary-btn close-modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Dashboard de Análise de Lojas de Curvelo - Sistema de Feedback e Ranking</p>
+            <p>Desenvolvido para monitoramento e melhoria contínua</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
