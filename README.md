@@ -1,7 +1,6 @@
 # 📊 Dashboard de Lojas - Curvelo/MG
 ### Um dashboard interativo para análise e visualização de lojas em Curvelo/MG, com sistema de ranking, gráficos estatísticos e funcionalidades de feedback.
 
-https://via.placeholder.com/800x400/3949ab/ffffff?text=Dashboard+Lojas+Curvelo
 
 ✨ Funcionalidades
 📈 Análise Visual
