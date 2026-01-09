@@ -51,3 +51,7 @@ Informações detalhadas: Popups com dados completos das lojas
 * Font Awesome: Ícones e elementos visuais
 
 * Google Fonts (Inter): Tipografia moderna
+
+  # 🔗 Link da pagina
+
+  link:https://wesleyorrr.github.io/Analise_lojasCVO/
