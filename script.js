@@ -1,4 +1,4 @@
-// Base de dados das lojas
+// Base de dados completa das lojas de Curvelo
 const storesData = [
     {
         name: "Amore Mio",
@@ -13,7 +13,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "A loja é linda! O atendimento é perfeito!",
         coordinates: [-18.7566, -44.4309],
-        lastEvaluation: "2023-10-15"
+        lastEvaluation: "2023-10-15",
+        monthlyGrowth: 15
     },
     {
         name: "Heloisa Ribeiro Curvelo",
@@ -28,7 +29,8 @@ const storesData = [
         services: ["Compras na loja", "Retirada na loja", "Entrega"],
         review: "",
         coordinates: [-18.7570, -44.4315],
-        lastEvaluation: "2023-11-20"
+        lastEvaluation: "2023-11-20",
+        monthlyGrowth: 8
     },
     {
         name: "Rota do Corpo Curvelo",
@@ -43,7 +45,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Excelente atendimento, ótimo preço e qualidade!",
         coordinates: [-18.7558, -44.4295],
-        lastEvaluation: "2023-10-28"
+        lastEvaluation: "2023-10-28",
+        monthlyGrowth: 12
     },
     {
         name: "Tanure Store • Moda Masculina Curvelo",
@@ -58,7 +61,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Foi um excelente atendimento, loja moda masculina moderníssima",
         coordinates: [-18.7580, -44.4325],
-        lastEvaluation: "2023-11-15"
+        lastEvaluation: "2023-11-15",
+        monthlyGrowth: 20
     },
     {
         name: "Nossa Loja",
@@ -73,7 +77,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Melhor loja de Curvelo!",
         coordinates: [-18.7535, -44.4280],
-        lastEvaluation: "2023-09-30"
+        lastEvaluation: "2023-09-30",
+        monthlyGrowth: 5
     },
     {
         name: "Loja CristaisdeCurvelo - Filial",
@@ -88,7 +93,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Melhor loja da cidade, produtos de qualidade com um excelente atendimento",
         coordinates: [-18.7590, -44.4330],
-        lastEvaluation: "2023-12-05"
+        lastEvaluation: "2023-12-05",
+        monthlyGrowth: 25
     },
     {
         name: "Lojas Duarte - Casa e Presente - Curvelo",
@@ -103,7 +109,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "O local apresenta uma boa variedade de produtos",
         coordinates: [-18.7510, -44.4250],
-        lastEvaluation: "2023-10-10"
+        lastEvaluation: "2023-10-10",
+        monthlyGrowth: 3
     },
     {
         name: "A IDEAL MODAS CURVELO",
@@ -118,7 +125,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Ótimo atendimento, parabéns pra essa equipe Maravilhosa.",
         coordinates: [-18.7600, -44.4340],
-        lastEvaluation: "2023-09-15"
+        lastEvaluation: "2023-09-15",
+        monthlyGrowth: 7
     },
     {
         name: "Loja Natália Diniz",
@@ -133,7 +141,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Indico de olhos fechados, peças maravilhosas e atendimento perfeito 😍😍",
         coordinates: [-18.7520, -44.4260],
-        lastEvaluation: "2023-11-25"
+        lastEvaluation: "2023-11-25",
+        monthlyGrowth: 30
     },
     {
         name: "Ypslon Curvelo",
@@ -148,7 +157,8 @@ const storesData = [
         services: ["Compras na loja", "Retirada na loja", "Entrega"],
         review: "",
         coordinates: [-18.7540, -44.4270],
-        lastEvaluation: "2023-08-20"
+        lastEvaluation: "2023-08-20",
+        monthlyGrowth: 2
     },
     {
         name: "Rede Albatroz - Curvelo",
@@ -163,7 +173,8 @@ const storesData = [
         services: ["Compras na loja", "Montador de móveis"],
         review: "Montador de móveis",
         coordinates: [-18.7560, -44.4300],
-        lastEvaluation: "2023-10-05"
+        lastEvaluation: "2023-10-05",
+        monthlyGrowth: 4
     },
     {
         name: "Lupo Franquia Curvelo",
@@ -178,7 +189,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Excelente atendimento, loja sensacional melhor de Curvelo e Região.",
         coordinates: [-18.7575, -44.4318],
-        lastEvaluation: "2023-11-10"
+        lastEvaluation: "2023-11-10",
+        monthlyGrowth: 18
     },
     {
         name: "Lojas Carvalho",
@@ -193,7 +205,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Preço acessível.",
         coordinates: [-18.7562, -44.4302],
-        lastEvaluation: "2023-09-05"
+        lastEvaluation: "2023-09-05",
+        monthlyGrowth: 1
     },
     {
         name: "Loja Casa & Conforto - Curvelo",
@@ -208,7 +221,8 @@ const storesData = [
         services: ["Compras na loja", "Entrega"],
         review: "",
         coordinates: [-18.7550, -44.4290],
-        lastEvaluation: "2023-08-15"
+        lastEvaluation: "2023-08-15",
+        monthlyGrowth: 10
     },
     {
         name: "Pontual Magazine",
@@ -223,7 +237,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "⭐ Quero deixar aqui meu elogio e agradecimento a essa loja maravilhosa!",
         coordinates: [-18.7595, -44.4335],
-        lastEvaluation: "2023-10-20"
+        lastEvaluation: "2023-10-20",
+        monthlyGrowth: 6
     },
     {
         name: "Dom Pedro Store - Curvelo",
@@ -238,7 +253,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "ROUPAS MARAVILHOSAS E DE ÓTIMA QUALIDADE, PREÇO TAMBÉM O MELHOR DA REGIÃO",
         coordinates: [-18.7585, -44.4328],
-        lastEvaluation: "2023-07-30"
+        lastEvaluation: "2023-07-30",
+        monthlyGrowth: 15
     },
     {
         name: "Ruth Figueiredo - Moda Feminina e Masculina",
@@ -253,7 +269,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Excelente loja Produtos maravilhosos Atendimento espetacular.",
         coordinates: [-18.7530, -44.4275],
-        lastEvaluation: "2023-12-10"
+        lastEvaluation: "2023-12-10",
+        monthlyGrowth: 22
     },
     {
         name: "Madame Chica",
@@ -268,7 +285,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Tudo muito lindo ,de bom gosto , atendimento excelente .",
         coordinates: [-18.7545, -44.4285],
-        lastEvaluation: "2023-11-05"
+        lastEvaluation: "2023-11-05",
+        monthlyGrowth: 9
     },
     {
         name: "Alto Impacto - Moda feminina em Curvelo",
@@ -283,7 +301,8 @@ const storesData = [
         services: ["Compras na loja"],
         review: "Excelente loja , bom atendimento , roupas lindas e de qualidade .",
         coordinates: [-18.7525, -44.4265],
-        lastEvaluation: "2023-12-01"
+        lastEvaluation: "2023-12-01",
+        monthlyGrowth: 17
     },
     {
         name: "Paulla Boutique - Loja de Roupa em Curvelo",
@@ -298,7 +317,8 @@ const storesData = [
         services: ["Compras na loja", "Retirada na porta", "Entrega"],
         review: "",
         coordinates: [-18.7578, -44.4319],
-        lastEvaluation: null
+        lastEvaluation: null,
+        monthlyGrowth: 0
     }
 ];
 
@@ -311,8 +331,15 @@ let minRating = 4.0;
 let onlyOpen = true;
 let selectedLevel = 'all';
 
+// Estado da interação
+let activeInteraction = {
+    type: null, // 'category', 'rating', 'store', 'performance'
+    value: null,
+    element: null
+};
+
 // Gráficos
-let rankingChart, categoryChart, reviewsChart;
+let rankingChart, categoryChart, performanceChart, timelineChart;
 
 // Cores para diferentes categorias
 const categoryColors = {
@@ -334,6 +361,12 @@ document.addEventListener('DOMContentLoaded', function() {
     renderRankingTable();
     
     // Event listeners
+    setupEventListeners();
+});
+
+// Configurar todos os event listeners
+function setupEventListeners() {
+    // Filtros
     document.getElementById('ratingSlider').addEventListener('input', function() {
         document.getElementById('ratingValue').textContent = this.value;
         minRating = parseFloat(this.value);
@@ -345,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
         filterStores();
     });
     
-    // Event listeners para filtros de nível
+    // Filtros de nível
     document.querySelectorAll('input[name="level"]').forEach(radio => {
         radio.addEventListener('change', function() {
             selectedLevel = this.value;
@@ -353,12 +386,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Botões de controle
     document.getElementById('resetFilters').addEventListener('click', resetFilters);
+    document.getElementById('resetAll').addEventListener('click', resetAllInteractions);
+    document.getElementById('clearFilter').addEventListener('click', clearActiveFilter);
     document.getElementById('toggleMap').addEventListener('click', toggleMap);
     document.getElementById('toggleCharts').addEventListener('click', toggleCharts);
     document.getElementById('showCongrats').addEventListener('click', showCongratsModal);
     document.getElementById('showAlerts').addEventListener('click', showAlertsModal);
-    document.getElementById('exportData').addEventListener('click', exportData);
+    document.getElementById('highlightFiltered').addEventListener('click', highlightFilteredOnMap);
     document.getElementById('shareCongrats').addEventListener('click', shareCongrats);
     
     // Fechar modais
@@ -378,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+}
 
 // Inicializar os filtros de categoria
 function initFilters() {
@@ -390,20 +426,44 @@ function initFilters() {
         
         const li = document.createElement('li');
         li.innerHTML = `
-            <label>
+            <label class="category-label">
                 <input type="checkbox" value="${category}" checked>
                 <span>${category}</span>
                 <span class="category-count">${count}</span>
             </label>
         `;
         
-        li.querySelector('input').addEventListener('change', function() {
+        const checkbox = li.querySelector('input');
+        checkbox.addEventListener('change', function() {
             if (this.checked) {
                 selectedCategories.push(this.value);
             } else {
                 selectedCategories = selectedCategories.filter(cat => cat !== this.value);
             }
+            
+            // Se esta é a única categoria selecionada, torna-a interação ativa
+            if (selectedCategories.length === 1 && selectedCategories.includes(this.value)) {
+                setActiveInteraction('category', this.value, this);
+            } else {
+                clearActiveInteractionIfType('category');
+            }
+            
             filterStores();
+        });
+        
+        // Adicionar evento de clique na label também
+        li.querySelector('.category-label').addEventListener('click', function(e) {
+            if (e.target.tagName !== 'INPUT') {
+                // Se for double click, seleciona apenas esta categoria
+                if (e.detail === 2) {
+                    selectedCategories = [category];
+                    document.querySelectorAll('#categoryFilter input').forEach(cb => {
+                        cb.checked = cb.value === category;
+                    });
+                    setActiveInteraction('category', category, this);
+                    filterStores();
+                }
+            }
         });
         
         categoryFilter.appendChild(li);
@@ -411,7 +471,687 @@ function initFilters() {
     });
 }
 
-// Renderizar as lojas
+// Inicializar gráficos
+function initCharts() {
+    initRankingChart();
+    initCategoryChart();
+    initPerformanceChart();
+    initTimelineChart();
+}
+
+// Gráfico de ranking (interativo)
+function initRankingChart() {
+    const ctx = document.getElementById('rankingChart').getContext('2d');
+    
+    // Ordenar lojas por avaliação
+    const sortedStores = [...storesData]
+        .filter(store => store.rating > 0)
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 10);
+    
+    rankingChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: sortedStores.map(store => store.name.substring(0, 15) + (store.name.length > 15 ? '...' : '')),
+            datasets: [{
+                label: 'Avaliação',
+                data: sortedStores.map(store => store.rating),
+                backgroundColor: sortedStores.map(store => categoryColors[store.category] || '#6c757d'),
+                borderColor: sortedStores.map(store => darkenColor(categoryColors[store.category] || '#6c757d', 20)),
+                borderWidth: 1,
+                borderRadius: 5,
+                hoverBackgroundColor: sortedStores.map(store => lightenColor(categoryColors[store.category] || '#6c757d', 20))
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            onClick: (evt, elements) => {
+                if (elements.length > 0) {
+                    const index = elements[0].index;
+                    const store = sortedStores[index];
+                    highlightStore(store.name);
+                }
+            },
+            onHover: (evt, elements) => {
+                evt.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 5,
+                    ticks: {
+                        stepSize: 0.5
+                    },
+                    title: {
+                        display: true,
+                        text: 'Avaliação',
+                        font: {
+                            weight: 'bold'
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(0,0,0,0.1)'
+                    }
+                },
+                x: {
+                    ticks: {
+                        maxRotation: 45
+                    },
+                    grid: {
+                        display: false
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    borderColor: '#3949ab',
+                    borderWidth: 1,
+                    cornerRadius: 8,
+                    callbacks: {
+                        label: function(context) {
+                            const store = sortedStores[context.dataIndex];
+                            return [
+                                `Avaliação: ${store.rating.toFixed(1)}`,
+                                `Reviews: ${store.reviews}`,
+                                `Categoria: ${store.category}`
+                            ];
+                        }
+                    }
+                },
+                datalabels: {
+                    display: true,
+                    color: 'white',
+                    font: {
+                        weight: 'bold'
+                    },
+                    formatter: function(value) {
+                        return value.toFixed(1);
+                    }
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+}
+
+// Gráfico de categorias (interativo)
+function initCategoryChart() {
+    const ctx = document.getElementById('categoryChart').getContext('2d');
+    
+    // Contar lojas por categoria
+    const categoryCounts = {};
+    storesData.forEach(store => {
+        categoryCounts[store.category] = (categoryCounts[store.category] || 0) + 1;
+    });
+    
+    const categories = Object.keys(categoryCounts);
+    const counts = Object.values(categoryCounts);
+    const backgroundColors = categories.map(cat => categoryColors[cat] || '#6c757d');
+    
+    categoryChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: categories,
+            datasets: [{
+                data: counts,
+                backgroundColor: backgroundColors,
+                borderColor: backgroundColors.map(color => darkenColor(color, 20)),
+                borderWidth: 2,
+                hoverBackgroundColor: backgroundColors.map(color => lightenColor(color, 20))
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            onClick: (evt, elements) => {
+                if (elements.length > 0) {
+                    const index = elements[0].index;
+                    const category = categories[index];
+                    
+                    // Alternar seleção da categoria
+                    if (activeInteraction.type === 'category' && activeInteraction.value === category) {
+                        clearActiveInteraction();
+                        selectedCategories = [...categories];
+                        document.querySelectorAll('#categoryFilter input').forEach(cb => {
+                            cb.checked = true;
+                        });
+                    } else {
+                        setActiveInteraction('category', category, elements[0]);
+                        selectedCategories = [category];
+                        document.querySelectorAll('#categoryFilter input').forEach(cb => {
+                            cb.checked = cb.value === category;
+                        });
+                    }
+                    
+                    filterStores();
+                }
+            },
+            onHover: (evt, elements) => {
+                evt.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+            },
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 15,
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        font: {
+                            size: 11
+                        }
+                    },
+                    onClick: (e, legendItem, legend) => {
+                        const index = legendItem.index;
+                        const category = categories[index];
+                        
+                        // Alternar seleção da categoria
+                        if (activeInteraction.type === 'category' && activeInteraction.value === category) {
+                            clearActiveInteraction();
+                            selectedCategories = [...categories];
+                            document.querySelectorAll('#categoryFilter input').forEach(cb => {
+                                cb.checked = true;
+                            });
+                        } else {
+                            setActiveInteraction('category', category, null);
+                            selectedCategories = [category];
+                            document.querySelectorAll('#categoryFilter input').forEach(cb => {
+                                cb.checked = cb.value === category;
+                            });
+                        }
+                        
+                        filterStores();
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    callbacks: {
+                        label: function(context) {
+                            const percentage = ((context.parsed / storesData.length) * 100).toFixed(1);
+                            return `${context.label}: ${context.parsed} lojas (${percentage}%)`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Gráfico de desempenho (scatter plot interativo)
+function initPerformanceChart() {
+    const ctx = document.getElementById('performanceChart').getContext('2d');
+    
+    // Preparar dados
+    const performanceData = storesData.map(store => ({
+        x: store.reviews,
+        y: store.rating,
+        name: store.name,
+        category: store.category,
+        radius: Math.min(store.reviews / 5, 15)
+    }));
+    
+    performanceChart = new Chart(ctx, {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'Lojas',
+                data: performanceData.map(item => ({
+                    x: item.x,
+                    y: item.y,
+                    r: item.radius,
+                    name: item.name,
+                    category: item.category
+                })),
+                backgroundColor: performanceData.map(item => 
+                    hexToRgba(categoryColors[item.category] || '#6c757d', 0.7)
+                ),
+                borderColor: performanceData.map(item => 
+                    darkenColor(categoryColors[item.category] || '#6c757d', 20)
+                ),
+                borderWidth: 1,
+                hoverBackgroundColor: performanceData.map(item => 
+                    hexToRgba(categoryColors[item.category] || '#6c757d', 0.9)
+                )
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            onClick: (evt, elements) => {
+                if (elements.length > 0) {
+                    const index = elements[0].index;
+                    const store = storesData.find(s => s.name === performanceData[index].name);
+                    if (store) {
+                        showStoreDetails(store);
+                    }
+                }
+            },
+            onHover: (evt, elements) => {
+                evt.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Número de Avaliações',
+                        font: {
+                            weight: 'bold'
+                        }
+                    },
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(0,0,0,0.1)'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Avaliação (0-5)',
+                        font: {
+                            weight: 'bold'
+                        }
+                    },
+                    beginAtZero: true,
+                    max: 5,
+                    ticks: {
+                        stepSize: 0.5
+                    },
+                    grid: {
+                        color: 'rgba(0,0,0,0.1)'
+                    }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    callbacks: {
+                        label: function(context) {
+                            const point = performanceData[context.dataIndex];
+                            return [
+                                point.name,
+                                `Avaliação: ${point.y.toFixed(1)}`,
+                                `Reviews: ${point.x}`,
+                                `Categoria: ${point.category}`
+                            ];
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Gráfico de linha temporal
+function initTimelineChart() {
+    const ctx = document.getElementById('timelineChart').getContext('2d');
+    
+    // Simular dados temporais (últimos 6 meses)
+    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'];
+    const categories = [...new Set(storesData.map(store => store.category))];
+    
+    // Gerar dados fictícios para o gráfico de linha
+    const datasets = categories.map(category => {
+        const color = categoryColors[category] || '#6c757d';
+        return {
+            label: category,
+            data: months.map(() => 4 + Math.random()), // Avaliação média entre 4 e 5
+            borderColor: color,
+            backgroundColor: hexToRgba(color, 0.1),
+            tension: 0.3,
+            fill: true,
+            pointBackgroundColor: color,
+            pointBorderColor: '#fff',
+            pointBorderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 6
+        };
+    });
+    
+    timelineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: months,
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            onClick: (evt, elements) => {
+                if (elements.length > 0) {
+                    const datasetIndex = elements[0].datasetIndex;
+                    const category = categories[datasetIndex];
+                    
+                    // Filtrar por categoria
+                    setActiveInteraction('category', category, null);
+                    selectedCategories = [category];
+                    document.querySelectorAll('#categoryFilter input').forEach(cb => {
+                        cb.checked = cb.value === category;
+                    });
+                    filterStores();
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    min: 3.5,
+                    max: 5,
+                    title: {
+                        display: true,
+                        text: 'Avaliação Média',
+                        font: {
+                            weight: 'bold'
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(0,0,0,0.1)'
+                    }
+                },
+                x: {
+                    grid: {
+                        color: 'rgba(0,0,0,0.1)'
+                    }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff'
+                }
+            }
+        }
+    });
+}
+
+// Funções de interação
+function setActiveInteraction(type, value, element) {
+    activeInteraction = { type, value, element };
+    updateActiveFilterDisplay();
+    highlightActiveElements();
+}
+
+function clearActiveInteraction() {
+    activeInteraction = { type: null, value: null, element: null };
+    updateActiveFilterDisplay();
+    removeHighlights();
+}
+
+function clearActiveInteractionIfType(type) {
+    if (activeInteraction.type === type) {
+        clearActiveInteraction();
+    }
+}
+
+function updateActiveFilterDisplay() {
+    const filterDisplay = document.getElementById('currentFilter');
+    const activeCategoryDisplay = document.getElementById('activeCategory');
+    
+    if (activeInteraction.type && activeInteraction.value) {
+        let filterText = '';
+        switch(activeInteraction.type) {
+            case 'category':
+                filterText = `Categoria: ${activeInteraction.value}`;
+                activeCategoryDisplay.textContent = activeInteraction.value;
+                break;
+            case 'store':
+                filterText = `Loja: ${activeInteraction.value}`;
+                activeCategoryDisplay.textContent = 'Loja Selecionada';
+                break;
+            case 'rating':
+                filterText = `Avaliação: ${activeInteraction.value}+`;
+                break;
+            default:
+                filterText = `Filtro Ativo: ${activeInteraction.value}`;
+        }
+        filterDisplay.textContent = filterText;
+    } else {
+        filterDisplay.textContent = 'Filtro Ativo: Nenhum';
+        activeCategoryDisplay.textContent = 'Todas';
+    }
+}
+
+function highlightActiveElements() {
+    // Remover destaques anteriores
+    removeHighlights();
+    
+    if (!activeInteraction.type || !activeInteraction.value) return;
+    
+    switch(activeInteraction.type) {
+        case 'category':
+            highlightCategory(activeInteraction.value);
+            break;
+        case 'store':
+            highlightStore(activeInteraction.value);
+            break;
+    }
+}
+
+function removeHighlights() {
+    // Remover classes de destaque
+    document.querySelectorAll('.selected, .highlighted').forEach(el => {
+        el.classList.remove('selected', 'highlighted');
+    });
+    
+    // Resetar estilos dos gráficos
+    if (categoryChart) {
+        categoryChart.data.datasets.forEach(dataset => {
+            if (dataset.originalBackgroundColor) {
+                dataset.backgroundColor = dataset.originalBackgroundColor;
+            }
+        });
+        categoryChart.update('none');
+    }
+}
+
+function highlightCategory(category) {
+    // Destacar no gráfico de pizza
+    if (categoryChart) {
+        const categoryIndex = categoryChart.data.labels.indexOf(category);
+        if (categoryIndex !== -1) {
+            // Salvar cores originais
+            if (!categoryChart.data.datasets[0].originalBackgroundColor) {
+                categoryChart.data.datasets[0].originalBackgroundColor = 
+                    [...categoryChart.data.datasets[0].backgroundColor];
+            }
+            
+            // Aplicar transparência às outras categorias
+            const newColors = categoryChart.data.datasets[0].originalBackgroundColor.map((color, index) => {
+                return index === categoryIndex ? color : hexToRgba(color, 0.3);
+            });
+            
+            categoryChart.data.datasets[0].backgroundColor = newColors;
+            categoryChart.update('none');
+        }
+    }
+    
+    // Destacar na tabela
+    document.querySelectorAll('#rankingTableBody tr').forEach(row => {
+        const categoryCell = row.cells[2];
+        if (categoryCell.textContent.includes(category)) {
+            row.classList.add('highlighted');
+        }
+    });
+    
+    // Destacar nos cards
+    document.querySelectorAll('.card').forEach(card => {
+        const categoryElement = card.querySelector('.category');
+        if (categoryElement && categoryElement.textContent === category) {
+            card.classList.add('highlighted');
+        }
+    });
+}
+
+function highlightStore(storeName) {
+    const store = storesData.find(s => s.name === storeName);
+    if (!store) return;
+    
+    setActiveInteraction('store', storeName, null);
+    
+    // Destacar na tabela
+    document.querySelectorAll('#rankingTableBody tr').forEach(row => {
+        const nameCell = row.cells[1];
+        if (nameCell.textContent.includes(storeName)) {
+            row.classList.add('selected');
+            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    });
+    
+    // Destacar nos cards
+    document.querySelectorAll('.card').forEach(card => {
+        const titleElement = card.querySelector('.card-title h3');
+        if (titleElement && titleElement.textContent === storeName) {
+            card.classList.add('selected');
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    });
+    
+    // Destacar no mapa
+    highlightStoreOnMap(storeName);
+    
+    // Atualizar informações dos gráficos
+    updateChartInfo(store);
+}
+
+function highlightStoreOnMap(storeName) {
+    markers.forEach(marker => {
+        const popupContent = marker.getPopup().getContent();
+        if (popupContent && popupContent.includes(storeName)) {
+            // Animar o marcador
+            marker.setZIndexOffset(1000);
+            marker.openPopup();
+            
+            // Adicionar classe de destaque
+            marker.setIcon(L.divIcon({
+                html: `<div style="background-color: #FFD700; width: 25px; height: 25px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(255,215,0,0.8); animation: pulse 1s infinite;"></div>`,
+                className: 'store-marker-highlighted',
+                iconSize: [31, 31],
+                iconAnchor: [15.5, 15.5]
+            }));
+            
+            // Centralizar mapa no marcador
+            map.setView(marker.getLatLng(), 16, {
+                animate: true,
+                duration: 1
+            });
+            
+            // Restaurar após 5 segundos
+            setTimeout(() => {
+                const store = storesData.find(s => s.name === storeName);
+                if (store) {
+                    const originalColor = categoryColors[store.category] || '#3949ab';
+                    marker.setIcon(L.divIcon({
+                        html: `<div style="background-color: ${originalColor}; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>`,
+                        className: 'store-marker',
+                        iconSize: [24, 24],
+                        iconAnchor: [12, 12]
+                    }));
+                }
+            }, 5000);
+        }
+    });
+}
+
+function highlightFilteredOnMap() {
+    // Destacar todos os marcadores filtrados
+    markers.forEach(marker => {
+        const popupContent = marker.getPopup().getContent();
+        const storeName = popupContent ? popupContent.match(/<div[^>]*>([^<]+)</)?.[1] : null;
+        
+        if (storeName && filteredStores.some(store => store.name === storeName.trim())) {
+            marker.setZIndexOffset(500);
+            marker.openPopup();
+        } else {
+            marker.setZIndexOffset(0);
+            marker.closePopup();
+        }
+    });
+}
+
+function updateChartInfo(store) {
+    document.getElementById('rankingInfo').innerHTML = `
+        <strong>${store.name}</strong><br>
+        Avaliação: ${store.rating.toFixed(1)} | Reviews: ${store.reviews} | Categoria: ${store.category}
+    `;
+    
+    document.getElementById('categoryInfo').innerHTML = `
+        Loja selecionada: <strong>${store.name}</strong><br>
+        Pertence à categoria: ${store.category}
+    `;
+    
+    document.getElementById('performanceInfo').innerHTML = `
+        <strong>${store.name}</strong><br>
+        Posição no gráfico: ${store.reviews} reviews × ${store.rating.toFixed(1)} avaliação
+    `;
+    
+    document.getElementById('tableInfo').innerHTML = `
+        Loja selecionada: <strong>${store.name}</strong> | 
+        Clique duas vezes em uma linha para ver detalhes
+    `;
+    
+    document.getElementById('mapInfo').innerHTML = `
+        Loja selecionada: <strong>${store.name}</strong> | 
+        Marcador destacado no mapa
+    `;
+}
+
+// Funções auxiliares para cores
+function lightenColor(color, percent) {
+    const num = parseInt(color.replace("#", ""), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = (num >> 16) + amt;
+    const G = (num >> 8 & 0x00FF) + amt;
+    const B = (num & 0x0000FF) + amt;
+    return `#${(
+        0x1000000 +
+        (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
+        (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
+        (B < 255 ? (B < 1 ? 0 : B) : 255)
+    )
+        .toString(16)
+        .slice(1)}`;
+}
+
+function darkenColor(color, percent) {
+    const num = parseInt(color.replace("#", ""), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = (num >> 16) - amt;
+    const G = (num >> 8 & 0x00FF) - amt;
+    const B = (num & 0x0000FF) - amt;
+    return `#${(
+        0x1000000 +
+        (R > 0 ? (R > 255 ? 255 : R) : 0) * 0x10000 +
+        (G > 0 ? (G > 255 ? 255 : G) : 0) * 0x100 +
+        (B > 0 ? (B > 255 ? 255 : B) : 0)
+    )
+        .toString(16)
+        .slice(1)}`;
+}
+
+function hexToRgba(hex, alpha) {
+    if (!hex) return `rgba(108, 117, 125, ${alpha})`;
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+// Funções principais
 function renderStores() {
     const cardsContainer = document.getElementById('cardsContainer');
     const noResults = document.getElementById('noResults');
@@ -421,23 +1161,40 @@ function renderStores() {
     if (filteredStores.length === 0) {
         noResults.style.display = 'block';
         document.getElementById('resultCount').textContent = '0';
+        document.getElementById('filteredShops').textContent = '0';
         return;
     }
     
     noResults.style.display = 'none';
     document.getElementById('resultCount').textContent = filteredStores.length;
     document.getElementById('totalCount').textContent = storesData.length;
+    document.getElementById('filteredShops').textContent = filteredStores.length;
     
     filteredStores.forEach(store => {
         const card = createStoreCard(store);
         cardsContainer.appendChild(card);
     });
+    
+    // Adicionar eventos de clique aos cards
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function() {
+            const storeName = this.querySelector('.card-title h3').textContent;
+            highlightStore(storeName);
+        });
+        
+        card.addEventListener('dblclick', function() {
+            const storeName = this.querySelector('.card-title h3').textContent;
+            const store = storesData.find(s => s.name === storeName);
+            if (store) {
+                showStoreDetails(store);
+            }
+        });
+    });
 }
 
-// Criar card de loja
 function createStoreCard(store) {
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = 'card interactive';
     
     // Determinar nível de avaliação
     const ratingLevel = getRatingLevel(store.rating);
@@ -456,6 +1213,10 @@ function createStoreCard(store) {
             stars += '<i class="fas fa-star-half-alt"></i>';
         }
     }
+    
+    // Formatando a data da última avaliação
+    const lastEvalDate = store.lastEvaluation ? 
+        new Date(store.lastEvaluation).toLocaleDateString('pt-BR') : 'N/A';
     
     card.innerHTML = `
         <div class="card-header">
@@ -498,7 +1259,7 @@ function createStoreCard(store) {
         </div>
         <div class="card-footer">
             <div class="card-info">
-                <small>Última avaliação: ${store.lastEvaluation ? new Date(store.lastEvaluation).toLocaleDateString('pt-BR') : 'N/A'}</small>
+                <small>Última avaliação: ${lastEvalDate}</small>
             </div>
             <div class="card-actions">
                 ${store.rating >= 4.5 ? `
@@ -508,7 +1269,7 @@ function createStoreCard(store) {
                 ` : ''}
                 ${store.rating >= 3.5 && store.rating < 4.5 ? `
                     <button class="card-btn alert" data-store="${store.name}">
-                        <i class="fas fa-exclamation-triangle"></i> Sugerir melhorias
+                        <i class="fas fa-exclamation-triangle"></i> Sugerir
                     </button>
                 ` : ''}
             </div>
@@ -518,14 +1279,16 @@ function createStoreCard(store) {
     // Adicionar eventos aos botões
     const congratsBtn = card.querySelector('.card-btn.congrats');
     if (congratsBtn) {
-        congratsBtn.addEventListener('click', function() {
+        congratsBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             congratulateStore(this.dataset.store);
         });
     }
     
     const alertBtn = card.querySelector('.card-btn.alert');
     if (alertBtn) {
-        alertBtn.addEventListener('click', function() {
+        alertBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             suggestImprovements(this.dataset.store);
         });
     }
@@ -533,7 +1296,6 @@ function createStoreCard(store) {
     return card;
 }
 
-// Filtrar lojas
 function filterStores() {
     filteredStores = storesData.filter(store => {
         // Filtro por categoria
@@ -567,19 +1329,18 @@ function filterStores() {
     updateStats();
     updateCharts();
     renderRankingTable();
+    updateChartInfoDisplays();
 }
 
-// Obter nível de avaliação
 function getRatingLevel(rating) {
     if (rating >= 4.5) return 'high';
     if (rating >= 3.5) return 'medium';
     return 'low';
 }
 
-// Atualizar estatísticas
 function updateStats() {
     const totalShops = storesData.length;
-    const openShops = storesData.filter(store => store.isOpen).length;
+    const filteredShops = filteredStores.length;
     const avgRating = (storesData.reduce((sum, store) => sum + store.rating, 0) / storesData.length).toFixed(1);
     
     // Encontrar a loja com maior avaliação
@@ -588,324 +1349,52 @@ function updateStats() {
     });
     
     document.getElementById('totalShops').textContent = totalShops;
-    document.getElementById('openShops').textContent = openShops;
+    document.getElementById('filteredShops').textContent = filteredShops;
     document.getElementById('avgRating').textContent = avgRating;
-    document.getElementById('topShop').textContent = topStore.name;
 }
 
-// Resetar filtros
-function resetFilters() {
-    selectedCategories = [...new Set(storesData.map(store => store.category))];
-    minRating = 4.0;
-    onlyOpen = true;
-    selectedLevel = 'all';
-    
-    // Atualizar UI
-    document.querySelectorAll('#categoryFilter input').forEach(checkbox => {
-        checkbox.checked = true;
-    });
-    
-    document.getElementById('ratingSlider').value = minRating;
-    document.getElementById('ratingValue').textContent = minRating;
-    document.getElementById('openNowFilter').checked = onlyOpen;
-    document.querySelector('input[name="level"][value="all"]').checked = true;
-    
-    filterStores();
-}
-
-// Inicializar mapa
-function initMap() {
-    // Coordenadas de Curvelo, MG
-    const curveloCoords = [-18.7566, -44.4309];
-    
-    // Criar mapa
-    map = L.map('map').setView(curveloCoords, 14);
-    
-    // Adicionar tile layer (OpenStreetMap)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    
-    // Adicionar marcadores para todas as lojas inicialmente
-    updateMap();
-}
-
-// Atualizar mapa com marcadores
-function updateMap() {
-    // Limpar marcadores existentes
-    markers.forEach(marker => marker.remove());
-    markers = [];
-    
-    // Adicionar novos marcadores
-    filteredStores.forEach(store => {
-        if (store.coordinates) {
-            const markerColor = categoryColors[store.category] || '#8a2387';
-            const ratingLevel = getRatingLevel(store.rating);
-            
-            // Definir cor baseada no nível de avaliação
-            let levelColor;
-            switch(ratingLevel) {
-                case 'high': levelColor = '#28a745'; break;
-                case 'medium': levelColor = '#ffc107'; break;
-                case 'low': levelColor = '#dc3545'; break;
-                default: levelColor = markerColor;
-            }
-            
-            // Criar ícone personalizado
-            const storeIcon = L.divIcon({
-                html: `<div style="background-color: ${levelColor}; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>`,
-                className: 'store-marker',
-                iconSize: [24, 24],
-                iconAnchor: [12, 12]
-            });
-            
-            const marker = L.marker(store.coordinates, { icon: storeIcon })
-                .addTo(map)
-                .bindPopup(`
-                    <div style="font-weight: bold; margin-bottom: 5px;">${store.name}</div>
-                    <div style="margin-bottom: 5px;">${store.category}</div>
-                    <div style="margin-bottom: 5px;">⭐ ${store.rating > 0 ? store.rating.toFixed(1) : 'Sem avaliações'} (${store.reviews})</div>
-                    <div style="margin-bottom: 5px;">${store.address}</div>
-                    <div style="color: ${store.isOpen ? 'green' : 'red'}; font-weight: bold;">
-                        ${store.isOpen ? '🟢 Aberta' : '🔴 Fechada'}
-                    </div>
-                `);
-            
-            markers.push(marker);
-        }
-    });
-    
-    // Ajustar view do mapa se houver marcadores
-    if (filteredStores.length > 0 && filteredStores[0].coordinates) {
-        const storeCoords = filteredStores.map(store => store.coordinates);
-        const bounds = L.latLngBounds(storeCoords);
-        map.fitBounds(bounds, { padding: [50, 50] });
+function updateCharts() {
+    // Atualizar gráfico de ranking com lojas filtradas
+    if (rankingChart) {
+        const sortedFilteredStores = [...filteredStores]
+            .filter(store => store.rating > 0)
+            .sort((a, b) => b.rating - a.rating)
+            .slice(0, 10);
+        
+        rankingChart.data.labels = sortedFilteredStores.map(store => 
+            store.name.substring(0, 15) + (store.name.length > 15 ? '...' : '')
+        );
+        rankingChart.data.datasets[0].data = sortedFilteredStores.map(store => store.rating);
+        rankingChart.data.datasets[0].backgroundColor = sortedFilteredStores.map(store => 
+            categoryColors[store.category] || '#6c757d'
+        );
+        rankingChart.update();
     }
+    
+    // Atualizar informações dos gráficos
+    updateChartInfoDisplays();
 }
 
-// Alternar visibilidade do mapa
-function toggleMap() {
-    const mainContent = document.querySelector('.main-content');
-    const toggleBtn = document.getElementById('toggleMap');
-    const icon = toggleBtn.querySelector('i');
-    const text = toggleBtn.querySelector('span');
-    
-    if (mainContent.classList.contains('map-expanded')) {
-        mainContent.classList.remove('map-expanded');
-        icon.className = 'fas fa-expand';
-        text.textContent = 'Expandir Mapa';
-    } else {
-        mainContent.classList.add('map-expanded');
-        icon.className = 'fas fa-compress';
-        text.textContent = 'Reduzir Mapa';
-    }
-}
-
-// Alternar gráficos
-function toggleCharts() {
-    const chartsContainer = document.querySelector('.charts-container');
-    const chartWrappers = document.querySelectorAll('.chart-wrapper');
-    
-    if (chartsContainer.style.gridTemplateColumns === '1fr') {
-        chartsContainer.style.gridTemplateColumns = '1fr 1fr';
-        chartWrappers[2].classList.add('full-width');
-    } else {
-        chartsContainer.style.gridTemplateColumns = '1fr';
-        chartWrappers[2].classList.remove('full-width');
-    }
-}
-
-// Inicializar gráficos
-function initCharts() {
-    // Gráfico de ranking
-    const rankingCtx = document.getElementById('rankingChart').getContext('2d');
-    
-    // Ordenar lojas por avaliação (maior para menor)
-    const sortedStores = [...storesData]
-        .filter(store => store.rating > 0)
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 10);
-    
-    rankingChart = new Chart(rankingCtx, {
-        type: 'bar',
-        data: {
-            labels: sortedStores.map(store => store.name),
-            datasets: [{
-                label: 'Avaliação',
-                data: sortedStores.map(store => store.rating),
-                backgroundColor: sortedStores.map(store => {
-                    const level = getRatingLevel(store.rating);
-                    return level === 'high' ? '#28a745' : 
-                           level === 'medium' ? '#ffc107' : '#dc3545';
-                }),
-                borderColor: sortedStores.map(store => {
-                    const level = getRatingLevel(store.rating);
-                    return level === 'high' ? '#218838' : 
-                           level === 'medium' ? '#e0a800' : '#c82333';
-                }),
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    max: 5,
-                    ticks: {
-                        stepSize: 0.5
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            const store = sortedStores[context.dataIndex];
-                            return `Avaliação: ${store.rating.toFixed(1)} (${store.reviews} avaliações)`;
-                        }
-                    }
-                }
-            }
-        }
-    });
-    
-    // Gráfico de categorias
-    const categoryCtx = document.getElementById('categoryChart').getContext('2d');
-    
-    // Contar lojas por categoria
+function updateChartInfoDisplays() {
     const categoryCounts = {};
-    storesData.forEach(store => {
+    filteredStores.forEach(store => {
         categoryCounts[store.category] = (categoryCounts[store.category] || 0) + 1;
     });
     
-    const categories = Object.keys(categoryCounts);
-    const counts = Object.values(categoryCounts);
+    const categoryList = Object.entries(categoryCounts)
+        .map(([cat, count]) => `${cat}: ${count}`)
+        .join(', ');
     
-    categoryChart = new Chart(categoryCtx, {
-        type: 'doughnut',
-        data: {
-            labels: categories,
-            datasets: [{
-                data: counts,
-                backgroundColor: categories.map(cat => categoryColors[cat] || '#6c757d'),
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        padding: 15
-                    }
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            const percentage = ((context.parsed / storesData.length) * 100).toFixed(1);
-                            return `${context.label}: ${context.parsed} lojas (${percentage}%)`;
-                        }
-                    }
-                }
-            }
-        }
-    });
+    document.getElementById('categoryInfo').textContent = 
+        `Lojas filtradas por categoria: ${categoryList || 'Nenhuma'}`;
     
-    // Gráfico de avaliações
-    const reviewsCtx = document.getElementById('reviewsChart').getContext('2d');
+    document.getElementById('performanceInfo').textContent = 
+        `${filteredStores.length} lojas mostradas no gráfico`;
     
-    // Preparar dados para gráfico de dispersão
-    const reviewData = storesData.map(store => ({
-        x: store.reviews,
-        y: store.rating,
-        name: store.name,
-        category: store.category
-    }));
-    
-    reviewsChart = new Chart(reviewsCtx, {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label: 'Lojas',
-                data: reviewData,
-                backgroundColor: reviewData.map(item => {
-                    const level = getRatingLevel(item.y);
-                    return level === 'high' ? 'rgba(40, 167, 69, 0.7)' : 
-                           level === 'medium' ? 'rgba(255, 193, 7, 0.7)' : 
-                           'rgba(220, 53, 69, 0.7)';
-                }),
-                borderColor: reviewData.map(item => {
-                    const level = getRatingLevel(item.y);
-                    return level === 'high' ? '#218838' : 
-                           level === 'medium' ? '#e0a800' : '#c82333';
-                }),
-                borderWidth: 1,
-                pointRadius: 6
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Número de Avaliações'
-                    },
-                    beginAtZero: true
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Avaliação'
-                    },
-                    beginAtZero: true,
-                    max: 5,
-                    ticks: {
-                        stepSize: 0.5
-                    }
-                }
-            },
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            const point = reviewData[context.dataIndex];
-                            return `${point.name}: ${point.y.toFixed(1)} estrelas, ${point.x} avaliações`;
-                        }
-                    }
-                }
-            }
-        }
-    });
+    document.getElementById('tableInfo').textContent = 
+        `${filteredStores.length} lojas no ranking | Clique em uma linha para selecionar`;
 }
 
-// Atualizar gráficos
-function updateCharts() {
-    // Atualizar gráfico de ranking com lojas filtradas
-    const sortedFilteredStores = [...filteredStores]
-        .filter(store => store.rating > 0)
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 10);
-    
-    rankingChart.data.labels = sortedFilteredStores.map(store => store.name);
-    rankingChart.data.datasets[0].data = sortedFilteredStores.map(store => store.rating);
-    rankingChart.data.datasets[0].backgroundColor = sortedFilteredStores.map(store => {
-        const level = getRatingLevel(store.rating);
-        return level === 'high' ? '#28a745' : 
-               level === 'medium' ? '#ffc107' : '#dc3545';
-    });
-    rankingChart.update();
-}
-
-// Renderizar tabela de ranking
 function renderRankingTable() {
     const tableBody = document.getElementById('rankingTableBody');
     tableBody.innerHTML = '';
@@ -913,72 +1402,139 @@ function renderRankingTable() {
     // Ordenar lojas por avaliação
     const sortedStores = [...filteredStores]
         .sort((a, b) => {
-            // Primeiro por avaliação (maior para menor)
             if (b.rating !== a.rating) {
                 return b.rating - a.rating;
             }
-            // Depois por número de avaliações (maior para menor)
             return b.reviews - a.reviews;
         });
     
     sortedStores.forEach((store, index) => {
         const row = document.createElement('tr');
+        row.className = 'interactive';
         const ratingLevel = getRatingLevel(store.rating);
-        const ratingClass = `rating-${ratingLevel}`;
         
         row.innerHTML = `
             <td>${index + 1}</td>
             <td><strong>${store.name}</strong></td>
             <td><span class="badge ${ratingLevel}">${store.category}</span></td>
-            <td class="${ratingClass}"><i class="fas fa-star"></i> ${store.rating > 0 ? store.rating.toFixed(1) : 'N/A'}</td>
+            <td class="rating-${ratingLevel}"><i class="fas fa-star"></i> ${store.rating > 0 ? store.rating.toFixed(1) : 'N/A'}</td>
             <td>${store.reviews}</td>
             <td><span class="status ${store.isOpen ? 'open' : 'closed'}">${store.isOpen ? 'Aberta' : 'Fechada'}</span></td>
-            <td>
-                ${store.rating >= 4.5 ? `
-                    <button class="action-btn congrats" data-store="${store.name}" title="Parabenizar">
-                        <i class="fas fa-trophy"></i>
-                    </button>
-                ` : ''}
-                ${store.rating >= 3.5 && store.rating < 4.5 ? `
-                    <button class="action-btn alert" data-store="${store.name}" title="Sugerir melhorias">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </button>
-                ` : ''}
-                ${store.rating < 3.5 ? `
-                    <button class="action-btn report" data-store="${store.name}" title="Relatar problemas">
-                        <i class="fas fa-flag"></i>
-                    </button>
-                ` : ''}
-            </td>
+            <td>${store.lastEvaluation ? new Date(store.lastEvaluation).toLocaleDateString('pt-BR') : 'N/A'}</td>
         `;
         
-        // Adicionar eventos aos botões
-        const congratsBtn = row.querySelector('.action-btn.congrats');
-        if (congratsBtn) {
-            congratsBtn.addEventListener('click', function() {
-                congratulateStore(this.dataset.store);
-            });
-        }
+        // Adicionar evento de clique
+        row.addEventListener('click', function() {
+            highlightStore(store.name);
+        });
         
-        const alertBtn = row.querySelector('.action-btn.alert');
-        if (alertBtn) {
-            alertBtn.addEventListener('click', function() {
-                suggestImprovements(this.dataset.store);
-            });
-        }
-        
-        const reportBtn = row.querySelector('.action-btn.report');
-        if (reportBtn) {
-            reportBtn.addEventListener('click', function() {
-                reportProblems(this.dataset.store);
-            });
-        }
+        // Adicionar evento de double click para mostrar detalhes
+        row.addEventListener('dblclick', function() {
+            showStoreDetails(store);
+        });
         
         tableBody.appendChild(row);
     });
 }
 
-// Mostrar modal de parabéns
+function showStoreDetails(store) {
+    const modalBody = document.getElementById('detailsModalBody');
+    
+    modalBody.innerHTML = `
+        <div class="store-details">
+            <div class="detail-section">
+                <h3><i class="fas fa-store"></i> Informações da Loja</h3>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Nome</span>
+                        <span class="detail-value">${store.name}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Categoria</span>
+                        <span class="detail-value badge ${getRatingLevel(store.rating)}">${store.category}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Avaliação</span>
+                        <span class="detail-value rating-${getRatingLevel(store.rating)}">
+                            <i class="fas fa-star"></i> ${store.rating.toFixed(1)} (${store.reviews} reviews)
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3><i class="fas fa-map-marker-alt"></i> Localização</h3>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Endereço</span>
+                        <span class="detail-value">${store.address}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Telefone</span>
+                        <span class="detail-value">${store.phone}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Horário</span>
+                        <span class="detail-value">${store.hours}</span>
+                    </div>
+                </div>
+            </div>
+            
+            ${store.review ? `
+            <div class="detail-section">
+                <h3><i class="fas fa-comment"></i> Último Review</h3>
+                <p style="font-style: italic; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                    "${store.review}"
+                </p>
+            </div>
+            ` : ''}
+            
+            <div class="detail-section">
+                <h3><i class="fas fa-chart-line"></i> Desempenho</h3>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Nível</span>
+                        <span class="detail-value badge ${getRatingLevel(store.rating)}">
+                            ${getRatingLevel(store.rating) === 'high' ? 'Alto' : 
+                              getRatingLevel(store.rating) === 'medium' ? 'Médio' : 'Baixo'}
+                        </span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Última Avaliação</span>
+                        <span class="detail-value">${store.lastEvaluation ? new Date(store.lastEvaluation).toLocaleDateString('pt-BR') : 'N/A'}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Status</span>
+                        <span class="detail-value status ${store.isOpen ? 'open' : 'closed'}">
+                            ${store.isOpen ? '🟢 Aberta' : '🔴 Fechada'}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3><i class="fas fa-trend-up"></i> Estatísticas</h3>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Crescimento Mensal</span>
+                        <span class="detail-value">${store.monthlyGrowth}%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Serviços</span>
+                        <span class="detail-value">${store.services.join(', ')}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Posição no Ranking</span>
+                        <span class="detail-value">#${storesData.sort((a,b) => b.rating - a.rating).findIndex(s => s.name === store.name) + 1}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById('detailsModal').classList.add('active');
+}
+
 function showCongratsModal() {
     // Encontrar lojas com avaliação alta (≥ 4.5)
     const highRatedStores = storesData
@@ -1010,6 +1566,7 @@ function showCongratsModal() {
                     <p><strong>Categoria:</strong> ${store.category}</p>
                     <p><strong>Avaliações:</strong> ${store.reviews}</p>
                     <p><strong>Endereço:</strong> ${store.address}</p>
+                    <p><strong>Crescimento:</strong> ${store.monthlyGrowth}% ao mês</p>
                     ${store.review ? `<p><strong>Último feedback:</strong> "${store.review}"</p>` : ''}
                 </div>
             `;
@@ -1022,7 +1579,6 @@ function showCongratsModal() {
     document.getElementById('congratsModal').classList.add('active');
 }
 
-// Mostrar modal de alertas
 function showAlertsModal() {
     // Encontrar lojas com avaliação média (3.5 - 4.4)
     const mediumRatedStores = storesData
@@ -1122,15 +1678,13 @@ function showAlertsModal() {
     document.getElementById('alertsModal').classList.add('active');
 }
 
-// Função para parabenizar uma loja específica
 function congratulateStore(storeName) {
     const store = storesData.find(s => s.name === storeName);
     if (!store) return;
     
-    alert(`🎉 PARABÉNS ${store.name.toUpperCase()}! 🎉\n\nSua loja está com excelente desempenho:\n• Avaliação: ${store.rating.toFixed(1)} estrelas\n• ${store.reviews} avaliações\n\nContinue com o ótimo trabalho! Sua dedicação ao atendimento e qualidade dos produtos está fazendo a diferença!`);
+    alert(`🎉 PARABÉNS ${store.name.toUpperCase()}! 🎉\n\nSua loja está com excelente desempenho:\n• Avaliação: ${store.rating.toFixed(1)} estrelas\n• ${store.reviews} avaliações\n• Crescimento: ${store.monthlyGrowth}% ao mês\n\nContinue com o ótimo trabalho! Sua dedicação ao atendimento e qualidade dos produtos está fazendo a diferença!`);
 }
 
-// Função para sugerir melhorias
 function suggestImprovements(storeName) {
     const store = storesData.find(s => s.name === storeName);
     if (!store) return;
@@ -1146,30 +1700,6 @@ function suggestImprovements(storeName) {
     alert(`📝 SUGESTÕES PARA ${store.name.toUpperCase()}:\n\nSua loja tem potencial para melhorar ainda mais (${store.rating.toFixed(1)} estrelas).\n\nAlgumas sugestões:\n${suggestions.map((s, i) => `${i+1}. ${s}`).join('\n')}\n\nPequenas melhorias podem elevar significativamente sua avaliação!`);
 }
 
-// Função para relatar problemas
-function reportProblems(storeName) {
-    const store = storesData.find(s => s.name === storeName);
-    if (!store) return;
-    
-    alert(`⚠️ ATENÇÃO: ${store.name.toUpperCase()} PRECISA DE MELHORIAS URGENTES!\n\nAvaliação atual: ${store.rating.toFixed(1)} estrelas\n\nRecomendações urgentes:\n1. Analisar todas as avaliações negativas\n2. Implementar plano de ação imediato\n3. Treinamento da equipe de atendimento\n4. Revisão da qualidade dos produtos\n5. Monitoramento diário do desempenho\n\nA situação exige atenção imediata para evitar piora na reputação.`);
-}
-
-// Exportar dados
-function exportData() {
-    const dataStr = JSON.stringify(filteredStores, null, 2);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-    
-    const exportFileDefaultName = `lojas-curvelo-${new Date().toISOString().split('T')[0]}.json`;
-    
-    const linkElement = document.createElement('a');
-    linkElement.setAttribute('href', dataUri);
-    linkElement.setAttribute('download', exportFileDefaultName);
-    linkElement.click();
-    
-    alert(`Dados exportados com sucesso!\n\nTotal de lojas exportadas: ${filteredStores.length}`);
-}
-
-// Compartilhar parabéns
 function shareCongrats() {
     const highRatedStores = storesData
         .filter(store => store.rating >= 4.5)
@@ -1188,9 +1718,9 @@ function shareCongrats() {
         shareText += `${medal} ${store.name} - ${store.rating.toFixed(1)} ⭐ (${store.reviews} avaliações)\n`;
     });
     
-    shareText += `\nConfira o dashboard completo em: [URL DO DASHBOARD]`;
+    shareText += `\nConfira o dashboard completo em: ${window.location.href}`;
     
-    // Simular compartilhamento (em um caso real, isso usaria a Web Share API)
+    // Simular compartilhamento
     if (navigator.share) {
         navigator.share({
             title: 'Top Lojas de Curvelo',
@@ -1208,4 +1738,172 @@ function shareCongrats() {
                 prompt('Copie o texto abaixo:', shareText);
             });
     }
+}
+
+function resetAllInteractions() {
+    clearActiveInteraction();
+    resetFilters();
+    removeHighlights();
+    
+    // Resetar mapa para visão inicial
+    if (map) {
+        const curveloCoords = [-18.7566, -44.4309];
+        map.setView(curveloCoords, 14, { animate: true });
+    }
+    
+    // Resetar informações dos gráficos
+    updateChartInfoDisplays();
+}
+
+function clearActiveFilter() {
+    clearActiveInteraction();
+    filterStores();
+}
+
+function resetFilters() {
+    selectedCategories = [...new Set(storesData.map(store => store.category))];
+    minRating = 4.0;
+    onlyOpen = true;
+    selectedLevel = 'all';
+    
+    // Atualizar UI
+    document.querySelectorAll('#categoryFilter input').forEach(checkbox => {
+        checkbox.checked = true;
+    });
+    
+    document.getElementById('ratingSlider').value = minRating;
+    document.getElementById('ratingValue').textContent = minRating;
+    document.getElementById('openNowFilter').checked = onlyOpen;
+    document.querySelector('input[name="level"][value="all"]').checked = true;
+    
+    clearActiveInteraction();
+    filterStores();
+}
+
+// Inicializar mapa
+function initMap() {
+    // Coordenadas de Curvelo, MG
+    const curveloCoords = [-18.7566, -44.4309];
+    
+    // Criar mapa
+    map = L.map('map').setView(curveloCoords, 14);
+    
+    // Adicionar tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    // Adicionar marcadores para todas as lojas
+    updateMap();
+}
+
+// Atualizar mapa com marcadores
+function updateMap() {
+    // Limpar marcadores existentes
+    markers.forEach(marker => marker.remove());
+    markers = [];
+    
+    // Adicionar novos marcadores
+    filteredStores.forEach(store => {
+        if (store.coordinates) {
+            const markerColor = categoryColors[store.category] || '#3949ab';
+            const ratingLevel = getRatingLevel(store.rating);
+            
+            // Definir cor baseada no nível de avaliação
+            let levelColor;
+            switch(ratingLevel) {
+                case 'high': levelColor = '#28a745'; break;
+                case 'medium': levelColor = '#ffc107'; break;
+                case 'low': levelColor = '#dc3545'; break;
+                default: levelColor = markerColor;
+            }
+            
+            // Criar ícone personalizado
+            const storeIcon = L.divIcon({
+                html: `<div style="background-color: ${levelColor}; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>`,
+                className: 'store-marker',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+            
+            const marker = L.marker(store.coordinates, { icon: storeIcon })
+                .addTo(map)
+                .bindPopup(`
+                    <div style="font-weight: bold; margin-bottom: 5px; font-size: 1.1rem;">${store.name}</div>
+                    <div style="margin-bottom: 5px;"><strong>Categoria:</strong> ${store.category}</div>
+                    <div style="margin-bottom: 5px;"><strong>Avaliação:</strong> ⭐ ${store.rating > 0 ? store.rating.toFixed(1) : 'Sem avaliações'} (${store.reviews} avaliações)</div>
+                    <div style="margin-bottom: 5px;"><strong>Endereço:</strong> ${store.address}</div>
+                    <div style="margin-bottom: 5px;"><strong>Telefone:</strong> ${store.phone}</div>
+                    <div style="color: ${store.isOpen ? 'green' : 'red'}; font-weight: bold; margin-bottom: 5px;">
+                        ${store.isOpen ? '🟢 Aberta' : '🔴 Fechada'}
+                    </div>
+                    <div style="font-size: 0.9rem; color: #666;">
+                        Clique no marcador para mais informações
+                    </div>
+                `);
+            
+            // Adicionar evento de clique no marcador
+            marker.on('click', function() {
+                highlightStore(store.name);
+            });
+            
+            markers.push(marker);
+        }
+    });
+    
+    // Ajustar view do mapa se houver marcadores
+    if (filteredStores.length > 0 && filteredStores[0].coordinates) {
+        const storeCoords = filteredStores.map(store => store.coordinates);
+        const bounds = L.latLngBounds(storeCoords);
+        map.fitBounds(bounds, { padding: [50, 50] });
+    }
+}
+
+// Alternar visibilidade do mapa
+function toggleMap() {
+    const mainContent = document.querySelector('.main-content');
+    const toggleBtn = document.getElementById('toggleMap');
+    const icon = toggleBtn.querySelector('i');
+    const text = toggleBtn.querySelector('span');
+    
+    if (mainContent.classList.contains('map-expanded')) {
+        mainContent.classList.remove('map-expanded');
+        icon.className = 'fas fa-expand';
+        text.textContent = 'Expandir Mapa';
+    } else {
+        mainContent.classList.add('map-expanded');
+        icon.className = 'fas fa-compress';
+        text.textContent = 'Reduzir Mapa';
+    }
+}
+
+// Alternar gráficos
+function toggleCharts() {
+    const chartsContainer = document.querySelector('.charts-container');
+    const chartWrappers = document.querySelectorAll('.chart-wrapper');
+    
+    if (chartsContainer.style.gridTemplateColumns === '1fr') {
+        chartsContainer.style.gridTemplateColumns = '1fr 1fr';
+        chartWrappers[2].classList.add('full-width');
+        chartWrappers[3].classList.add('full-width');
+    } else {
+        chartsContainer.style.gridTemplateColumns = '1fr';
+        chartWrappers[2].classList.remove('full-width');
+        chartWrappers[3].classList.remove('full-width');
+    }
+}
+
+// Função de exportação de dados
+function exportData() {
+    const dataStr = JSON.stringify(filteredStores, null, 2);
+    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+    
+    const exportFileDefaultName = `lojas-curvelo-${new Date().toISOString().split('T')[0]}.json`;
+    
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.click();
+    
+    alert(`Dados exportados com sucesso!\n\nTotal de lojas exportadas: ${filteredStores.length}\n\nArquivo: ${exportFileDefaultName}`);
 }

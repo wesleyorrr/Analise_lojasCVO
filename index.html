@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Lojas Curvelo - Análise Completa</title>
+    <title>Dashboard Interativo - Lojas Curvelo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +16,11 @@
 <body>
     <header>
         <div class="container">
-            <h1><i class="fas fa-chart-line"></i> Dashboard de Lojas - Curvelo/MG</h1>
-            <p class="subtitle">Análise completa com ranking, gráficos e sistema de feedback</p>
+            <h1><i class="fas fa-sync-alt"></i> Dashboard Interativo - Lojas Curvelo</h1>
+            <p class="subtitle">Clique em qualquer gráfico para filtrar os dados em todos os componentes</p>
+            <div class="interaction-info">
+                <i class="fas fa-mouse-pointer"></i> Clique em barras, fatias ou pontos para interagir
+            </div>
         </div>
     </header>
 
@@ -29,9 +33,15 @@
             <button class="control-btn" id="showAlerts">
                 <i class="fas fa-exclamation-triangle"></i> Ver Alertas
             </button>
-            <button class="control-btn" id="exportData">
-                <i class="fas fa-file-export"></i> Exportar Dados
+            <button class="control-btn" id="resetAll">
+                <i class="fas fa-redo"></i> Resetar Interações
             </button>
+            <div class="active-filter">
+                <span id="currentFilter">Filtro Ativo: Nenhum</span>
+                <button class="clear-filter-btn" id="clearFilter">
+                    <i class="fas fa-times"></i> Limpar Filtro
+                </button>
+            </div>
         </div>
 
         <div class="dashboard">
@@ -95,54 +105,76 @@
                 
                 <div class="stats">
                     <p>Total de lojas: <span id="totalShops">0</span></p>
-                    <p>Lojas abertas: <span id="openShops">0</span></p>
+                    <p>Lojas filtradas: <span id="filteredShops">0</span></p>
                     <p>Média geral: <span id="avgRating">0.0</span></p>
-                    <p>Líder em avaliações: <span id="topShop">-</span></p>
+                    <p>Categoria ativa: <span id="activeCategory">Todas</span></p>
                 </div>
                 
                 <button class="btn reset-btn" id="resetFilters">
-                    <i class="fas fa-redo"></i> Limpar Filtros
+                    <i class="fas fa-redo"></i> Limpar Todos os Filtros
                 </button>
             </aside>
             
             <!-- Conteúdo Principal -->
             <main class="main-content">
-                <!-- Seção de Gráficos -->
+                <!-- Seção de Gráficos Interativos -->
                 <section class="charts-section">
                     <div class="section-header">
-                        <h2><i class="fas fa-chart-bar"></i> Análise Visual</h2>
+                        <h2><i class="fas fa-chart-network"></i> Gráficos Interconectados</h2>
                         <div class="chart-controls">
                             <button class="btn small-btn" id="toggleCharts">
-                                <i class="fas fa-exchange-alt"></i> Alternar Gráficos
+                                <i class="fas fa-exchange-alt"></i> Alternar Layout
                             </button>
                         </div>
                     </div>
                     
                     <div class="charts-container">
-                        <div class="chart-wrapper">
+                        <div class="chart-wrapper interactive">
                             <div class="chart-header">
-                                <h3>Top 10 Lojas por Avaliação</h3>
+                                <h3><i class="fas fa-chart-bar"></i> Top Lojas por Avaliação</h3>
+                                <span class="chart-subtitle">Clique em uma barra para filtrar</span>
                             </div>
                             <div class="chart-container">
                                 <canvas id="rankingChart"></canvas>
                             </div>
+                            <div class="chart-info" id="rankingInfo">
+                                Mostrando todas as lojas
+                            </div>
                         </div>
                         
-                        <div class="chart-wrapper">
+                        <div class="chart-wrapper interactive">
                             <div class="chart-header">
-                                <h3>Distribuição por Categoria</h3>
+                                <h3><i class="fas fa-chart-pie"></i> Distribuição por Categoria</h3>
+                                <span class="chart-subtitle">Clique em uma fatia para filtrar</span>
                             </div>
                             <div class="chart-container">
                                 <canvas id="categoryChart"></canvas>
                             </div>
+                            <div class="chart-info" id="categoryInfo">
+                                Clique em uma categoria para filtrar
+                            </div>
                         </div>
                         
-                        <div class="chart-wrapper full-width">
+                        <div class="chart-wrapper full-width interactive">
                             <div class="chart-header">
-                                <h3>Performance por Número de Avaliações</h3>
+                                <h3><i class="fas fa-bullseye"></i> Análise de Desempenho</h3>
+                                <span class="chart-subtitle">Clique em um ponto para ver detalhes</span>
                             </div>
                             <div class="chart-container">
-                                <canvas id="reviewsChart"></canvas>
+                                <canvas id="performanceChart"></canvas>
+                            </div>
+                            <div class="chart-info" id="performanceInfo">
+                                Relação entre avaliações e quantidade de reviews
+                            </div>
+                        </div>
+
+                        <div class="chart-wrapper full-width">
+                            <div class="chart-header">
+                                <h3><i class="fas fa-trend-up"></i> Evolução Temporal</h3>
+                                <span class="chart-subtitle">Últimas avaliações por categoria</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="timelineChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -151,7 +183,7 @@
                 <!-- Seção de Ranking -->
                 <section class="ranking-section">
                     <div class="section-header">
-                        <h2><i class="fas fa-trophy"></i> Ranking de Lojas</h2>
+                        <h2><i class="fas fa-trophy"></i> Ranking Interativo</h2>
                         <div class="ranking-info">
                             <span class="badge high">Alta: ≥ 4.5</span>
                             <span class="badge medium">Média: 3.5 - 4.4</span>
@@ -169,7 +201,7 @@
                                     <th>Avaliação</th>
                                     <th>Nº Avaliações</th>
                                     <th>Status</th>
-                                    <th>Ações</th>
+                                    <th>Última Aval.</th>
                                 </tr>
                             </thead>
                             <tbody id="rankingTableBody">
@@ -177,12 +209,15 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="table-info" id="tableInfo">
+                        Clique em uma linha para destacar a loja nos gráficos
+                    </div>
                 </section>
                 
                 <!-- Cards das Lojas -->
                 <section class="cards-section">
                     <div class="section-header">
-                        <h2><i class="fas fa-th-large"></i> Detalhes das Lojas</h2>
+                        <h2><i class="fas fa-store"></i> Lojas Detalhadas</h2>
                         <div class="result-count">
                             Mostrando <span id="resultCount">0</span> de <span id="totalCount">0</span> lojas
                         </div>
@@ -202,19 +237,43 @@
                 <!-- Mapa -->
                 <section class="map-section">
                     <div class="map-header">
-                        <h2><i class="fas fa-map-marker-alt"></i> Mapa de Localização</h2>
-                        <button class="btn" id="toggleMap">
-                            <i class="fas fa-expand"></i> Expandir Mapa
-                        </button>
+                        <h2><i class="fas fa-map-marker-alt"></i> Mapa Interativo</h2>
+                        <div class="map-controls">
+                            <button class="btn" id="toggleMap">
+                                <i class="fas fa-expand"></i> Expandir Mapa
+                            </button>
+                            <button class="btn secondary-btn" id="highlightFiltered">
+                                <i class="fas fa-location-crosshairs"></i> Destacar Filtrados
+                            </button>
+                        </div>
                     </div>
                     <div class="map-container">
                         <div id="map"></div>
+                    </div>
+                    <div class="map-info" id="mapInfo">
+                        Marcadores coloridos por categoria. Clique para ver detalhes.
                     </div>
                 </section>
             </main>
         </div>
     </div>
     
+    <!-- Modal de Detalhes -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-info-circle"></i> Detalhes da Loja</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="detailsModalBody">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn secondary-btn close-modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal de Parabéns -->
     <div class="modal" id="congratsModal">
         <div class="modal-content">
@@ -252,8 +311,8 @@
     
     <footer>
         <div class="container">
-            <p>Dashboard de Análise de Lojas de Curvelo - Sistema de Feedback e Ranking</p>
-            <p>Desenvolvido para monitoramento e melhoria contínua</p>
+            <p>Dashboard Interativo - Lojas de Curvelo | Clique em qualquer elemento para ver a interconexão</p>
+            <p class="footer-info">Todas as visualizações estão conectadas em tempo real</p>
         </div>
     </footer>
 
